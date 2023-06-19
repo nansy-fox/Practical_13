@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spalsh_screen">
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="148dp"
+        android:layout_height="0sp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/alegreya_bold"
+        android:text="@string/hello"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hi"
+        app:layout_constraintEnd_toEndOf="@+id/tv_hi"
+        app:layout_constraintStart_toStartOf="@+id/tv_hi" />
+
+    <TextView
+        android:id="@+id/tv_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/alegreya_medium"
+        android:gravity="center"
+        android:text="@string/enjoy_the_qualifiers"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_button" />
+
+    <TextView
+        android:id="@+id/tv_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/alegreya_medium"
+        android:gravity="center"
+        android:text="@string/no_acc_registration"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_style"
+        android:fontFamily="@font/alegreya_medium"
+        android:text="@string/add_in_acc"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:backgroundTint="@color/light_theame_green"
+        app:layout_constraintBottom_toTopOf="@+id/tv_registration"
+        app:layout_constraintEnd_toEndOf="@+id/tv_registration"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/tv_registration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

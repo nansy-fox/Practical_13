@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@drawable/loginbackground">
+
+    <Button
+        android:id="@+id/bt_profile"
+        android:layout_width="362dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/round_style"
+        android:fontFamily="@font/alegreya_medium"
+        android:text="@string/profile"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:backgroundTint="@color/light_theame_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/alegreya_medium"
+        android:gravity="start"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_signIn"
+        android:layout_width="362dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_style"
+        android:fontFamily="@font/alegreya_medium"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:backgroundTint="@color/light_theame_green"
+        app:layout_constraintBottom_toTopOf="@+id/tv_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_medium"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_icon"
+        app:layout_constraintStart_toStartOf="@+id/im_icon"
+        app:layout_constraintTop_toBottomOf="@+id/im_icon" />
+
+    <ImageView
+        android:id="@+id/im_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="230dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBalLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reg"
+        app:startIconDrawable="@drawable/baseline_mail_outline_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edEmail"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:autofillHints="emailAddress"
+            android:hint="Email"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/Animation.Design.BottomSheetDialog"
+        app:layout_constraintBottom_toTopOf="@+id/bt_signIn"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+        app:passwordToggleContentDescription="description"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/baseline_vpn_key_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
